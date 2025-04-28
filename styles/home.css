@@ -1,1 +1,202 @@
 @import url(./style.css);
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.6em;
+    padding-left: 5%;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    align-items: top;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+main div img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin: 5px;
+}
+
+main div {
+    border: solid 1px black;
+    padding: 1vw;
+    margin: 1vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    button {
+        width: 100%;
+        height: 30px;
+        color: white;
+        background-color: rgb(50, 50, 50);
+        border: solid 1px black;
+        border-radius: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+}
+
+.oculta {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .janela {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 600px;
+        width: 90%;
+    }
+
+    div {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            padding: 7px;
+            font-weight: bold;
+            font-size: 1.2em;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: 300px;
+        object-fit: contain;
+        margin: 5px 0;
+    }
+
+    .btn {
+        width: 50%;
+        height: 40px;
+        color: white;
+        background-color: rgb(50, 50, 50);
+        border: solid 1px black;
+        border-radius: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+        align-self: center;
+        margin-top: 20px;
+    }
+}
+
+#cad .janela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.oculta {
+    display: none;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main div {
+        padding: 5%;
+        margin: 2%;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    .janela {
+        width: 95%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    .btn {
+        width: 80%;
+    }
+
+    .modal img {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 10%;
+        margin: 5%;
+    }
+
+    .modal {
+        padding: 5px;
+    }
+
+    .janela {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        width: 90%;
+    }
+
+    .modal img {
+        height: 250px;
+    }
+}

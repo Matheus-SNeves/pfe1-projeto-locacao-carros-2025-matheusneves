@@ -1,1 +1,61 @@
 @import url(./style.css);
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  thead {
+    background-color: #ffffff;
+  }
+  
+  thead th {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  button {
+    background-color: #cccccc;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #b3b3b3;
+  } 
+  @media (max-width: 768px) {
+    header {
+      font-size: 1.5rem;
+    }
+  
+    table {
+      font-size: 0.9rem;
+    }
+  
+    th, td {
+      padding: 8px;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+    }
+  }
